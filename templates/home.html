@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .result-container {
+            background-color: #116e7a;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .prediction {
+            color: #2c3e50;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .details {
+            background-color: #688d5d;
+            border: 1px solid #c0b583;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #162eb8;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Prediction Results</h1>
+        
+        <div class="prediction">
+            Estimated Insurance Cost: ${{ predicted_cost }}
+        </div>
+        
+        <div class="details">
+            <h2>Input Details:</h2>
+            <p><strong>Age:</strong> {{ age }} years</p>
+            <p><strong>Sex:</strong> {{ sex }}</p>
+            <p><strong>BMI:</strong> {{ bmi }}</p>
+            <p><strong>Number of Children:</strong> {{ children }}</p>
+            <p><strong>Smoker Status:</strong> {{ smoker }}</p>
+            <p><strong>Region:</strong> {{ region }}</p>
+        </div>
+    </div>
+    
+    <a href="/" class="back-btn">Make Another Prediction</a>
+</body>
+</html>
